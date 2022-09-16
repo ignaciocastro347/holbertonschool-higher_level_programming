@@ -12,9 +12,9 @@ def roman_to_int(roman_string):
         "M": 1000
     }
     values = list(map(lambda x: rommap[x], roman_string))
-    values = [(x * -1) 
+    values = [
+        (x * -1)
         if i + 1 < len(values) and values[i + 1] > x
-        else x
-        for i, x in enumerate(values)]
+        else x for i, x in enumerate(values)
+        ]
     return sum(values)
-    
