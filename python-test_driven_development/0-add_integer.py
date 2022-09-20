@@ -3,6 +3,7 @@
 
 
 def add_integer(a, b=98):
+    """ function to add two integers """
     if a is None or type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
     if type(b) != int and type(b) != float:
