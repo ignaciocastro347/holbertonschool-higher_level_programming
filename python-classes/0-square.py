@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-""" 0-sqaure module"""
+""" 0-square module"""
+
+
 class Sqaure:
-	""" class Square """
+    """ class Square """
+    pass
