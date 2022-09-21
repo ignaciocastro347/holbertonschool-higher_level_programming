@@ -3,7 +3,8 @@
 
 
 def text_indentation(text):
-    """ function to add and print '\n\n' up and down when '.', ':' or '?' is found """
+    """ function to add and print '\n\n' up and down when
+    '.', ':' or '?' is found """
     if type(text) != str:
         raise TypeError("text must be a string")
 
