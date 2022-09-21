@@ -8,15 +8,15 @@ Using ``say_my_name``
 
 >>> say_my_name()
 Traceback (most recent call last):
-TypeError: say_my_name() missing 1 required positional argument: 'fisrt_name'
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 >>> say_my_name(None)
 Traceback (most recent call last):
-TypeError: say_my_name() missing 1 required positional argument: 'fisrt_name'
+TypeError: first_name must be a string
 
 >>> say_my_name(None, None)
 Traceback (most recent call last):
-TypeError: fisrt_name must be a string
+TypeError: first_name must be a string
 
 >>> say_my_name("pepe", 2)
 Traceback (most recent call last):
@@ -24,4 +24,4 @@ TypeError: last_name must be a string
 
 >>> say_my_name(None)
 Traceback (most recent call last):
-TypeError: fisrt_name must be a string
+TypeError: first_name must be a string
