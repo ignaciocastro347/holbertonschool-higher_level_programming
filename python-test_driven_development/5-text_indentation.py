@@ -9,4 +9,4 @@ def text_indentation(text):
     text = text.replace(".", ".\n\n").replace("?", "?\n\n").replace(":", ":\n\n") 
     if text.endswith("\n\n"):
         text = text[:-2]
-    print(text)
+    print(text, end="")
