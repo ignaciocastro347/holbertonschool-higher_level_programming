@@ -51,5 +51,5 @@ class Rectangle():
     def __str__(self):
         rectangle_str = ""
         for i in range(self.__height):
-            rectangle_str += ("#" * self.__width + ("\n" if i != self.__height else ""))
+            rectangle_str += ("#" * self.__width + ("\n" if (i + 1) != self.__height else ""))
         return rectangle_str
