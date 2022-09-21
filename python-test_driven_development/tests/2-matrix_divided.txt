@@ -12,7 +12,7 @@ TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' an
 
 >>> matrix_divided(None)
 Traceback (most recent call last):
-matrix_divided() missing 1 required positional argument: 'div'
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 >>> matrix_divided(None, None)
 Traceback (most recent call last):

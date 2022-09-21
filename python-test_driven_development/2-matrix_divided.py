@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ matrix divided module """
+
+
 def matrix_divided(matrix, div):
     """ function that return a new matrix with divided values """
     if type(div) != int and type(div) != float:
@@ -14,6 +16,7 @@ def matrix_divided(matrix, div):
         new_matrix.append([])
         for item in row:
             if type(item) != int and type(item) != float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists)"
+                " of integers/floats")
             new_matrix[idx].append(round(item / div, 2))
     return new_matrix
