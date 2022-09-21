@@ -8,6 +8,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         self.assertEqual(max_integer([]), None)
 
+    def test_only_one_item(self):
+        self.assertEqual(max_integer([1]), 1)
+
     def test_max_at_the_end(self):
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
     
