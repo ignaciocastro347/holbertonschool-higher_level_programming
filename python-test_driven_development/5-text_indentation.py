@@ -15,4 +15,4 @@ def text_indentation(text):
     text = "?\n\n".join(text_list)
     if text.endswith("\n\n"):
         text = text[:-2]
-    print(text)
+    print(text, end="")
