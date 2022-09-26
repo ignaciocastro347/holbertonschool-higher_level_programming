@@ -6,5 +6,4 @@ class MyList(list):
     """ Rectangle class """
 
     def print_sorted(self):
-        print(sorted(self))
         return sorted(self)
