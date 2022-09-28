@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Recrtangle module """
+""" MyList module """
 
 
 class MyList(list):
-    """ Rectangle class """
+    """ MyList class """
 
     def print_sorted(self):
         print(sorted(self))
