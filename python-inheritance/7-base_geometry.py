@@ -2,9 +2,6 @@
 """ BaseGeometry module """
 
 
-from typing import Type
-
-
 class BaseGeometry:
     """ BaseGeometry class"""
     def area(self):
