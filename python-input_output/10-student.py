@@ -10,7 +10,8 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
+        dict = self.__dict__
         if (type(attrs) == list
             and all(type(x) == str for x in attrs)):
-            return { key: self.__dict__[key] for key in attrs }
-        return self.__dict__
+            return { key: dict[key] for key in set(attrs) & set(dict.keys()) }
+        return dict
