@@ -11,6 +11,6 @@ class Student:
 
     def to_json(self, attrs=None):
         if (type(attrs) == list
-            and type(x) == str for x in attrs):
+            and all(type(x) == str for x in attrs)):
             return { key: self.__dict__[key] for key in attrs }
         return self.__dict__
