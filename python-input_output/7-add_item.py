@@ -6,9 +6,6 @@ if __name__ == '__main__':
     load_file = __import__('6-load_from_json_file').load_from_json_file
     argv = sys.argv
 
-    try:
-        list = load_file("add_item.json")
-    except Exception:
-        list = []
+    list = load_file("add_item.json")
     list += argv[1:]
     save_to_file(list, "add_item.json")
