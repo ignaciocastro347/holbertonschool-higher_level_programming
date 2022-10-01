@@ -7,7 +7,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        if not id:
+        if id:
            self.id = id
         else:
             type(self).__nb_objects += 1
