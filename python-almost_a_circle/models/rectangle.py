@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Rectangle model """
-from typing import Type
 from .base import Base
 
 
