@@ -61,19 +61,22 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ return the area of this rectangle """
         return (self.__width * self.__height)
 
     def display(self):
+        """ print the rectangle with # character """
         for row in range(self.__height):
             print("#" * self.__width)
 
     def __str__(self):
+        """ return a resume of this Rectangle instance """
         return "[Rectangle] ({}) {}/{} {}/{}".format(
             self.id, self.__x, self.y, self.__width, self.__height)
 
     def display(self):
+        """ print the rectangle with # character taking x
+            and y into account """
         print("\n" * self.__y, end="")
         for row in range(self.__height):
             print((" " * self.__x) + ("#" * self.__width))
-
-        
