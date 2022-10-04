@@ -71,7 +71,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """ return a resume of this Rectangle instance """
-        return "[Rectangle] ({}) {}/{} {}/{}".format(
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.y, self.__width, self.__height)
 
     def display(self):
@@ -80,3 +80,11 @@ class Rectangle(Base):
         print("\n" * self.__y, end="")
         for row in range(self.__height):
             print((" " * self.__x) + ("#" * self.__width))
+
+    def update(self, *args):
+        """ update an existing Rectagle instance """
+        self.id = args[0]
+        self.width = args[1]
+        self.height = args[1]
+        self.x = args[1]
+        self.y = args[1]
