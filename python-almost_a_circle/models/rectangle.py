@@ -83,8 +83,14 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ update an existing Rectagle instance """
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[1]
-        self.x = args[1]
-        self.y = args[1]
+        length = len(args)
+        if (length > 0):
+            self.id = args[0]
+        if (length > 1):
+            self.width = args[1]
+        if (length > 2):
+            self.height = args[2]
+        if (length > 3):
+            self.x = args[3]
+        if (length > 4):
+            self.y = args[4]
