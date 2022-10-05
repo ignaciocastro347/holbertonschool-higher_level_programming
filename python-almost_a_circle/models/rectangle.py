@@ -85,16 +85,15 @@ class Rectangle(Base):
         """ update an existing Rectagle instance """
         if kwargs is not None:
             for key, value in kwargs.items():
-                match key:
-                    case "id":
+                    if key == "id":
                         self.id = value
-                    case "width":
+                    elif key == "width":
                         self.width = value
-                    case "height":
+                    elif key == "height":
                         self.height = value
-                    case "x":
+                    elif key == "x":
                         self.x = value
-                    case "y":
+                    elif key == "y":
                         self.y = value
         else:
             length = len(args)
