@@ -84,7 +84,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ update an existing Rectagle instance """
         if kwargs is not None:
-            for key, value in kwargs.iteritems():
+            for key, value in kwargs.items():
                 match key:
                     case "id":
                         self.id = value
