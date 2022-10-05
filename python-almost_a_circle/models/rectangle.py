@@ -81,16 +81,30 @@ class Rectangle(Base):
         for row in range(self.__height):
             print((" " * self.__x) + ("#" * self.__width))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update an existing Rectagle instance """
-        length = len(args)
-        if (length > 0):
-            self.id = args[0]
-        if (length > 1):
-            self.width = args[1]
-        if (length > 2):
-            self.height = args[2]
-        if (length > 3):
-            self.x = args[3]
-        if (length > 4):
-            self.y = args[4]
+        if kwargs is not None:
+            for key, value in kwargs.iteritems():
+                match key:
+                    case "id":
+                        self.id = value
+                    case "width":
+                        self.width = value
+                    case "height":
+                        self.height = value
+                    case "x":
+                        self.x = value
+                    case "y":
+                        self.y = value
+        else:
+            length = len(args)
+            if (length > 0):
+                self.id = args[0]
+            if (length > 1):
+                self.width = args[1]
+            if (length > 2):
+                self.height = args[2]
+            if (length > 3):
+                self.x = args[3]
+            if (length > 4):
+                self.y = args[4]
