@@ -35,3 +35,9 @@ class Base:
                     str += cls.to_json_string(obj.to_dictionary())
                 str += "]"
                 f.write(str)
+
+    def from_json_string(json_string):
+        """ return the list of the JSON string """
+        if (json_string is None or json_string == ""):
+            return []
+        return json.loads(json_string)
