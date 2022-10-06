@@ -5,5 +5,5 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     def test_init(self):
-        base = Base()
-        self.assertEqual(base.id, 1)
+        base = Base(89)
+        self.assertEqual(base.id, 89)
