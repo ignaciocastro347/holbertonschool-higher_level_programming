@@ -27,7 +27,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ update an existing Square instance """
-        if kwargs is not None:
+        if len(kwargs) > 0:
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
