@@ -36,17 +36,19 @@ class Base:
                 str += "]"
                 f.write(str)
 
+    @staticmethod
     def from_json_string(json_string):
         """ return the list of the JSON string """
         if (json_string is None or json_string == ""):
             return []
         return json.loads(json_string)
 
+    @classmethod
     def create(cls, **dictionary):
         "return an instance wit all attributes already set"
         if cls.__name__ == 'Rectangle':
-            new_instance = cls(0, 0)
+            obj = cls(0, 0)
         elif cls.__name__ == 'Square':
-            new_instance = cls(0)
-        new_instance.update(**dictionary)
-        return new_instance
+            obj = cls(0)
+        obj.update(**dictionary)
+        return obj
