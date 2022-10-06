@@ -29,14 +29,14 @@ class Square(Rectangle):
         """ update an existing Square instance """
         if kwargs is not None:
             for key, value in kwargs.items():
-                    if key == "id":
-                        self.id = value
-                    elif key == "size":
-                        self.width = self.height = value
-                    elif key == "x":
-                        self.x = value
-                    elif key == "y":
-                        self.y = value
+                if key == "id":
+                    self.id = value
+                elif key == "size":
+                    self.width = self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
         else:
             length = len(args)
             if (length > 0):
