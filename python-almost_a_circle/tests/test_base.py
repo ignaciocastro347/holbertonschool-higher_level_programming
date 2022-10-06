@@ -4,6 +4,14 @@ import unittest
 from models.base import Base
 
 class TestBase(unittest.TestCase):
-    def test_init(self):
-        base = Base(89)
-        self.assertEqual(base.id, 89)
+    def setUp(self):
+        self.base = Base()
+    
+    def test_init1(self):
+        self.assertEqual(self.base.id, 1)
+    
+    def test_init2(self):
+        self.assertEqual(self.base.id, 2)
+    
+    def test_init3(self):
+        self.assertEqual(self.base.id, 3)
