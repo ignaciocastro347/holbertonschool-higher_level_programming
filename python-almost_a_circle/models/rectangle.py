@@ -109,4 +109,5 @@ class Rectangle(Base):
                 self.y = args[4]
 
     def to_dictionary(self):
+        """ return a dictionary of the instance """
         return self.__dict__
