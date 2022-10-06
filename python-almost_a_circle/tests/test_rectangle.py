@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Unittest for Rectangle class """
 import unittest
-Rectangle = __import__('../../models/Rectangle.py').Rectangle
+from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
     pass
