@@ -29,3 +29,10 @@ class TestToJsonString(unittest.TestCase):
 
     def test_to_json_string(self):
         self.assertEqual(self.b.to_json_string(None), "[]")
+
+class TestFromJsonString(unittest.TestCase):
+    def setUp(self):
+        self.b = Base()
+
+    def test_from_json_string(self):
+        self.assertEqual(self.b.from_json_string(None), [])
