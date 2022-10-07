@@ -8,10 +8,15 @@ class TestRectangle(unittest.TestCase):
         self.r1 = Rectangle(1, 2)
         self.r2 = Rectangle(1, 2, 3)
         self.r3 = Rectangle(1, 2, 3, 4)
-        # self.r4 = Rectangle("1", 2)
 
-    def test_init(self):
-        self.assertEqual(self.r1.width, 1)
+    def test_init1(self):
+        self.assertEqual(self.r1.to_dictionary(), {"id": 1, "width": 1, "height": 2, "x": 0, "y":0})
+
+    def test_init2(self):
+        self.assertEqual(self.r1.to_dictionary(), {"id": 1, "width": 1, "height": 2, "x": 0, "y":0})
+
+    def test_init3(self):
+        self.assertEqual(self.r1.to_dictionary(), {"id": 1, "width": 1, "height": 2, "x": 0, "y":0})
 
 class TestRectangle(unittest.TestCase):
     def test_init(self):
