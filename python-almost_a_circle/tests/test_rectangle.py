@@ -3,7 +3,7 @@
 import unittest
 from models.rectangle import Rectangle
 
-class TestFromJsonString(unittest.TestCase):
+class TestRectangle(unittest.TestCase):
     def setUp(self):
         self.r1 = Rectangle(1, 2)
         self.r2 = Rectangle(1, 2, 3)
@@ -11,4 +11,4 @@ class TestFromJsonString(unittest.TestCase):
         # self.r4 = Rectangle("1", 2)
 
     def test_init(self):
-        self.assertEqual(self.r1.id, 1)
+        self.assertEqual(self.r1.width, 1)
