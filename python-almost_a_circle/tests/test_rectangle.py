@@ -30,7 +30,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r3.y, 4)
         self.assertEqual(self.r3.y, 5)
 
-    
+
 
 class TestRectangle(unittest.TestCase):
     def test_init(self):
@@ -38,3 +38,12 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 1, "2")
         self.assertRaises(TypeError, Rectangle, 1, 2, "3")
         self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
+
+    def test_init2(self):
+        self.assertRaises(ValueError, Rectangle, -1, 2)
+        self.assertRaises(ValueError, Rectangle, -1, -2)
+        self.assertRaises(ValueError, Rectangle, 0, 2)
+        self.assertRaises(ValueError, Rectangle, 1, 0)
+        self.assertRaises(ValueError, Rectangle, 1, 2, -3)
+        self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
+
