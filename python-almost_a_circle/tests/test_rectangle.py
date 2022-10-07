@@ -73,5 +73,14 @@ class TestRectangleDisplay(unittest.TestCase):
         r3.display()
         self.assertEqual(stdout.getvalue(), "##\n ##\n\n ##\n")
 
+class TestRectangleToDict(unittest.TestCase):
+    def test_to_dictionary(self):
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r1.to_dictionary(), {
+            "id": 5,"width": 1,"height": 2,"x": 3,"y": 4})
 
-
+class TestRectangleUpdate(unittest.TestCase):
+    def test_update(self):
+        r1 = Rectangle(1, 2, 3, 4)
+        r1.update()
+        self.assertEqual(r1.width, 1)
