@@ -22,6 +22,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r3.x, 3)
         self.assertEqual(self.r3.y, 4)
 
+    def test_init4(self):
+        self.r3 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(self.r3.width, 1)
+        self.assertEqual(self.r3.height, 2)
+        self.assertEqual(self.r3.x, 3)
+        self.assertEqual(self.r3.y, 4)
+        self.assertEqual(self.r3.y, 5)
+
+    
 
 class TestRectangle(unittest.TestCase):
     def test_init(self):
