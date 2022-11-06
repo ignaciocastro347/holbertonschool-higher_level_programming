@@ -3,5 +3,6 @@
 --   - Results must be sorted in ascending order by cities.id
 --   - You can use only one SELECT statement
 SELECT c.id, c.name, s.name FROM cities c 
-JOIN states s
+INNER JOIN states s
+USING state_id
 ORDER BY c.id ASC;
