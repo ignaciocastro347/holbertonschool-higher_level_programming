@@ -4,5 +4,5 @@
 --   - You can use only one SELECT statement
 SELECT c.id, c.name, s.name FROM cities c 
 INNER JOIN states s
-USING (c.state_id)
+ON c.state_id = s.id
 ORDER BY c.id ASC;
