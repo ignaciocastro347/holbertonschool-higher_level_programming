@@ -9,5 +9,6 @@ SELECT g.name AS genre, COUNT(g.name) AS number_of_shows
 FROM tv_genres g
 LEFT JOIN tv_show_genres pivot
 ON g.id = pivot.genre_id
+WHERE pivot.show_id IS NOT NULL
 GROUP BY g.name
 ORDER BY number_of_shows DESC;
