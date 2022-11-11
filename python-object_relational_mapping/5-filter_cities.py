@@ -12,5 +12,7 @@ if __name__ == "__main__":
         WHERE s.name = '{}'\
         ORDER BY c.id ASC;".format(sys.argv[4]))
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    for idx, row in enumerate(rows):
+        if idx != 0:
+            print(", ", end="")
+        print(row[0], end="")
