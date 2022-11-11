@@ -18,6 +18,5 @@ if __name__ == "__main__":
 
     session.add(State(name="Louisiana"))
 
-    state = session.query(State.id).filter(name == "Louisiana").fisrt()
+    state = session.query(State.id).filter(State.name == "Louisiana").fisrt()
     print(state[0])
-
