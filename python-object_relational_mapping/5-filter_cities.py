@@ -16,3 +16,4 @@ if __name__ == "__main__":
         if idx != 0:
             print(", ", end="")
         print(row[0], end="")
+    print()
