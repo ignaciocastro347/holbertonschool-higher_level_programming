@@ -10,7 +10,7 @@ if __name__ == '__main__':
     from model_state import Base, State
     from model_city import City
     import sys
-    
+
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engine)
@@ -20,8 +20,6 @@ if __name__ == '__main__':
     result = session.query(State, City).filter(
         State.id == City.state_id).order_by(City.id).all()
 
-    for s, c in result:
-        print(f'{s.name}: ({c.id}) {c.name}')
-
-    session.commit()
-    session.close()
+    cities = session.query(City, State).filter(City.state_id == State.id).all()
+    for row in cities:
+        print("{}: ({}) {}".format(row.State.name, row.City.id, row.City.name))
