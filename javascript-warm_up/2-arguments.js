@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const amountArgs = process.argv.length() - 2;
+const amountArgs = Object.keys(process.argv).length - 2;
 
 if (amountArgs === 0) {
   console.log('No argument');
