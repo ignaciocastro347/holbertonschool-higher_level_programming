@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const langs = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (const lang in langs) {
-  console.log(lang);
+for (let i = 0; i < langs.length; i++) {
+  console.log(langs[i]);
 }
