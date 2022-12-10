@@ -9,7 +9,7 @@ function factorial (n) {
   for (let i = n; i > 1; i--) {
     factorial *= i;
   }
-  return factorial;
+  return Math.floor(factorial);
 }
 
 console.log(factorial(n));
