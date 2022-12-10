@@ -1,15 +1,17 @@
 #!/usr/bin/node
 
-const args = Object.values(process.argv).slice(2);
+const args = require('process').argv;
+const num = parseInt(args[2]);
+console.log(factorialize(num));
 
-const n = Number(args[0]);
-
-function factorial (n) {
-  let factorial = 1;
-  for (let i = n; i > 1; i--) {
-    factorial *= i;
+function factorialize (num) {
+  if (num < 0) {
+    return -1;
+  } else if (num === 0 || !num) {
+    return 1;
+  } else if (num === 1) {
+    return 1;
+  } else {
+    return num * factorialize(num - 1);
   }
-  return Math.floor(factorial);
 }
-
-console.log(factorial(n));
