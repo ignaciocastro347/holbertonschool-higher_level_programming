@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const amountArgs = Object.keys(process.argv).length - 2;
+const args = Object.values(process.argv).slice(2);
 
-if (amountArgs === 0) {
+if (!args[0]) {
   console.log('No argument');
 } else {
-  for (arg of process.argv.slice(2)) {
+  for (arg of args) {
     console.log(arg);
   }
 }
