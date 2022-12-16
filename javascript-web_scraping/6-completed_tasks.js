@@ -10,10 +10,12 @@ request(args[0], function (error, response, body) {
 
   const todos = JSON.parse(body);
   todos.forEach(todo => {
-    if (!Object.keys(amountCompletedPerUser).includes(todo.userId.toString())) {
-      amountCompletedPerUser[todo.userId] = 0;
+    if (todo.completed) {
+      if (!Object.keys(amountCompletedPerUser).includes(todo.userId.toString())) {
+        amountCompletedPerUser[todo.userId] = 0;
+      }
+      amountCompletedPerUser[todo.userId] = amountCompletedPerUser[todo.userId] + 1;
     }
-    if (todo.completed) { amountCompletedPerUser[todo.userId] = amountCompletedPerUser[todo.userId] + 1; }
   });
   console.log(amountCompletedPerUser);
 });
